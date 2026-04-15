@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "404394866988",
+    "project_id": "lendflow-c26c6",
+    "storage_bucket": "lendflow-c26c6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404394866988:android:587b81c1467514096e5489",
+        "android_client_info": {
+          "package_name": "com.example.presta_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404394866988-ichf3rf805lg21ee4u5ak46gpa5j9362.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.presta_app",
+            "certificate_hash": "908a582502372e7e589b0396aea09486675ee157"
+          }
+        },
+        {
+          "client_id": "404394866988-th6lsra3q6plar8u2dsansna8t9iadf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhz4nMJEh87sLHgGON7Q9LyfuD2MF1lyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404394866988-th6lsra3q6plar8u2dsansna8t9iadf8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
