@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  // NUEVA FUNCIÓN: Recuperar Contraseña
+  // funcion de recuperar Contraseña
   Future<void> recuperarPassword() async {
     final email = controladorEmail.text.trim();
     
@@ -188,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 
-                // NUEVO BOTÓN: Recuperar contraseña
+                // boton recuperar contraseña
                 TextButton(
                   onPressed: recuperarPassword,
                   child: const Text(

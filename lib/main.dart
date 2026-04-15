@@ -116,7 +116,7 @@ class _MainScreenState extends State<MainScreen> {
   String _searchQuery = ""; 
   String _selectedCategory = "Todas"; 
   final List<String> _sessionLogs = [];
-
+  // solicitudes personalizadas que cree
   final List<Map<String, String>> _mockRequests = [
     {'quien': 'Prof. Martínez', 'que': 'Proyector Aula 3', 'estado': 'pendiente'},
     {'quien': 'Laura (3ºA)', 'que': 'Portátil Asus', 'estado': 'pendiente'},
@@ -256,7 +256,7 @@ class _MainScreenState extends State<MainScreen> {
       stream: FirebaseFirestore.instance.collection('assets').snapshots(),
       builder: (context, snapshot) {
         
-        // --- PROTECCIÓN EXTRA A NIVEL DE APLICACIÓN ---
+        // un pco de proteccion extra para la app
         if (snapshot.hasError) {
           return const Scaffold(
             body: Center(child: Text('Error al conectar con la base de datos', style: TextStyle(color: Colors.red))),
@@ -410,7 +410,7 @@ class _MainScreenState extends State<MainScreen> {
         ),
       );
     }
-
+    
     return ListView.builder(
       padding: const EdgeInsets.all(15),
       itemCount: pendingRequests.length,
@@ -553,7 +553,7 @@ class _MainScreenState extends State<MainScreen> {
       ],
     );
   }
-
+  //firebase autenticacion usuario que 
   Widget _buildDrawer() {
     final user = FirebaseAuth.instance.currentUser;
     final userEmail = user?.email ?? 'usuario@lendflow.com';
@@ -691,7 +691,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
   }
-
+  //todas las categorias de momento que meti
   IconData _getCategoryIcon(String category) {
     if (category == 'Portátiles') return Icons.laptop;
     if (category == 'Móviles') return Icons.smartphone;
@@ -737,7 +737,7 @@ class _DetailScreenState extends State<DetailScreen> {
         stream: FirebaseFirestore.instance.collection('assets').doc(widget.docId).snapshots(),
         builder: (context, snapshot) {
           
-          // --- proteccion pantalla ---
+          // --- proteccion pantalla 
           if (snapshot.hasError) return const Center(child: Text('Error al cargar la ficha.'));
           if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
           if (!snapshot.hasData || !snapshot.data!.exists) return const Center(child: Text('El equipo ya no existe.'));
