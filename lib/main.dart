@@ -475,14 +475,14 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Widget _buildStatsHeader(AsyncSnapshot<QuerySnapshot> snapshot) {
-    // --- SOLUCIÓN VISUAL PARA EL GRAFICO ---
+    
     if (snapshot.connectionState == ConnectionState.waiting) {
       return const Padding(
         padding: EdgeInsets.all(30.0),
         child: CircularProgressIndicator(color: Colors.teal),
       );
     }
-    // ---------------------------------------
+    
 
     if (!snapshot.hasData) return const SizedBox();
     final docs = snapshot.data!.docs;
@@ -600,11 +600,11 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Widget _buildAssetList({required AsyncSnapshot<QuerySnapshot> snapshot, required bool showOnlyLoans}) {
-    // --- AQUÍ ESTÁ EL SALVAVIDAS ---
+   
     if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
     if (snapshot.hasError) return const Center(child: Text('Error al cargar datos.'));
     if (!snapshot.hasData || snapshot.data!.docs.isEmpty) return const Center(child: Text('No hay registros.'));
-    // --------------------------------
+    
 
     List<DeviceModel> filteredList = snapshot.data!.docs
         .map((doc) => DeviceModel.fromDoc(doc))
@@ -737,7 +737,7 @@ class _DetailScreenState extends State<DetailScreen> {
         stream: FirebaseFirestore.instance.collection('assets').doc(widget.docId).snapshots(),
         builder: (context, snapshot) {
           
-          // --- PROTECCIÓN EN LA PANTALLA DE DETALLE ---
+          // --- proteccion pantalla ---
           if (snapshot.hasError) return const Center(child: Text('Error al cargar la ficha.'));
           if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
           if (!snapshot.hasData || !snapshot.data!.exists) return const Center(child: Text('El equipo ya no existe.'));
