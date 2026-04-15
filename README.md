@@ -1,16 +1,14 @@
-# presta_app
+# LendFlow - Sistema de Gestión de Inventarios
 
-A new Flutter project.
+LendFlow es una aplicación multiplataforma desarrollada con Flutter y Firebase diseñada para optimizar el control de activos y préstamos en entornos técnicos y educativos.
 
-## Getting Started
+## Características Principales
+* Sincronización en tiempo real: Control de stock instantáneo con Cloud Firestore.
+* Auditoría Visual: Registro fotográfico numerado para garantizar la trazabilidad del estado de los equipos.
+* Interfaz Responsiva: Adaptada para dispositivos móviles y entornos de escritorio mediante Material Design 3.
+* Gestión de Solicitudes: Bandeja de entrada para la aprobación o denegación de préstamos.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Stack Tecnológico
+* Frontend: Flutter SDK & Dart.
+* Backend: Firebase (Authentication, Firestore, Storage).
+* Arquitectura: Estructura modular por capas para escalabilidad.
